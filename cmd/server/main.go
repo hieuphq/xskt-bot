@@ -19,5 +19,9 @@ func main() {
 	r.HandleFunc("/", HomeEndpoint)
 	if err := http.ListenAndServe(":8080", r); err != nil {
 		log.Fatal(err)
+		log.Fatal(err)
+		log.Fatal(err)
+		log.Fatal(err)
+		log.Fatal(err)
 	}
 }
