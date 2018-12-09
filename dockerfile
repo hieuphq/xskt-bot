@@ -7,6 +7,6 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o api cmd/server/main.go
 
 FROM alpine
 WORKDIR /
-COPY --from=0 /go/src/github.com/hieuphq/xskt-bot/api api
+COPY --from=0 /go/src/github.com/hieuphq/xskt-bot/api /api
 
-CMD ["api"]
+CMD ["/api"]
