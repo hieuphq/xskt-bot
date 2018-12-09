@@ -1,0 +1,14 @@
+version: "1"
+
+services:
+  xskt-bot:
+    image: hieuphq/xskt-bot:0.1
+    environment:
+      - VERIFY_TOKEN=${VERIFY_TOKEN}
+      - PAGE_ACCESS_TOKEN=${PAGE_ACCESS_TOKEN}
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
+    
