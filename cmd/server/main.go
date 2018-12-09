@@ -24,7 +24,7 @@ func main() {
 	e := echo.New()
 	e.GET("/webhook", VerifyEndpointHandler)
 	e.POST("/webhook", MessageEndpointHandler)
-	e.Logger.Fatal(e.Start(":8080"))
+	e.Logger.Fatal(e.Start(":8084"))
 }
 
 // VerifyEndpointHandler ...

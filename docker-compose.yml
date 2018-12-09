@@ -6,6 +6,14 @@ services:
     environment:
       - VERIFY_TOKEN=${VERIFY_TOKEN}
       - PAGE_ACCESS_TOKEN=${PAGE_ACCESS_TOKEN}
+      - VIRTUAL_PROTO=http
+      - HTTPS_METHOD=redirect
+      - HTTPS_METHOD=nohttp
+      - VIRTUAL_HOST=bot.kalimtab.com
+      - LETSENCRYPT_HOST=bot.kalimtab.com
+      - LETSENCRYPT_EMAIL=hieupq@dwarvesv.com
+    expose:
+      - 80
 
 networks:
   default:
