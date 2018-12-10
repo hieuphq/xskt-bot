@@ -12,6 +12,7 @@ import (
 	"github.com/hieuphq/xskt-bot/errors"
 	"github.com/hieuphq/xskt-bot/models"
 	"github.com/labstack/echo"
+	"github.com/labstack/echo/middleware"
 )
 
 const (
@@ -22,6 +23,8 @@ const (
 
 func main() {
 	e := echo.New()
+	e.Use(middleware.Logger())
+
 	e.GET("/webhook", VerifyEndpointHandler)
 	e.POST("/webhook", MessageEndpointHandler)
 	e.Logger.Fatal(e.Start(":8084"))

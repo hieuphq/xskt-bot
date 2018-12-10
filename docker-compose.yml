@@ -1,4 +1,4 @@
-version: "3"
+version: "1"
 
 services:
   xskt-bot:
@@ -6,14 +6,14 @@ services:
     environment:
       - VERIFY_TOKEN=${VERIFY_TOKEN}
       - PAGE_ACCESS_TOKEN=${PAGE_ACCESS_TOKEN}
-      - VIRTUAL_PROTO=http
-      - HTTPS_METHOD=redirect
-      - HTTPS_METHOD=nohttp
-      - VIRTUAL_HOST=bot.kalimtab.com
-      - LETSENCRYPT_HOST=bot.kalimtab.com
-      - LETSENCRYPT_EMAIL=hieupq@dwarvesv.com
+      #- VIRTUAL_PROTO=http
+      #- HTTPS_METHOD=redirect
+      #- HTTPS_METHOD=nohttp
+      - VIRTUAL_HOST=presta.kalimtab.com
+      #- LETSENCRYPT_HOST=presta.kalimtab.com
+      #- LETSENCRYPT_EMAIL=hieupq@dwarvesv.com
     expose:
-      - 8084
+      - 80
 
 networks:
   default:
